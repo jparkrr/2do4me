@@ -2,6 +2,7 @@
 from flask import Flask
 import flask.ext.sqlalchemy
 import flask.ext.restless
+from sqlalchemy.sql.expression import func
 
 app = Flask(__name__, static_url_path = "")
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/3do5me.db'
@@ -14,6 +15,13 @@ class Task(db.Model):
     sortOrder = db.Column(db.Integer, unique=True)
     text = db.Column(db.Unicode)
     done = db.Column(db.Boolean)
+
+    def __init__(self, text):
+        self.text = text
+        self.done = False
+
+        max_sort = db.session.query(func.max(Task.sortOrder)).scalar()
+        self.sortOrder = max_sort + 1
 
 db.create_all()
 
