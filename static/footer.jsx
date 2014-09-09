@@ -4,13 +4,13 @@ define(["react"], function(React) {
       return (
         <div className="footer">
           <span className="count">{this.props.count} items left</span>
-          <a href="#" onClick={this.props.removeComplete}>
+          <span className="click" onClick={this.props.removeComplete}>
             Remove completed
-          </a>
+          </span>
           <span> | </span>
-          <a href="#" onClick={this.props.markAll}>
+          <span className="click" onClick={this.props.markAll}>
             Mark all as complete
-          </a>
+          </span>
         </div>
       );
     }
