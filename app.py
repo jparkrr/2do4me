@@ -21,12 +21,19 @@ class Task(db.Model):
         self.done = False
 
         max_sort = db.session.query(func.max(Task.sortOrder)).scalar()
-        self.sortOrder = max_sort + 1
+        if max_sort is not None:
+            self.sortOrder = max_sort + 1
+        else:
+            self.sortOrder = 0
 
 db.create_all()
 
 manager.create_api(Task,
     methods=['GET', 'POST', 'PUT', 'DELETE'], results_per_page=50)
+
+@app.route('/')
+def root():
+    return app.send_static_file('index.html')
 
 if __name__ == '__main__':
     app.run(debug = True)
