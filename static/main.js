@@ -3,7 +3,10 @@ require.config({
     "jquery"     : "bower_components/jquery/dist/jquery",
     "underscore" : "bower_components/underscore/underscore",
     "backbone"   : "bower_components/backbone/backbone",
-    "react"      : "bower_components/react/react"
+    "react"      : "bower_components/react/react",
+    "JSXTransformer": "bower_components/react/jsxtransformer",
+    "jsx"        : "bower_components/jsx-requirejs-plugin/js/jsx",
+    "text"        : "bower_components/jsx-requirejs-plugin/js/text"
   },
   "shim" : {
     "backbone" : {
@@ -19,6 +22,9 @@ require.config({
     "underscore" : {
       "exports" : "_"
     }
+  },
+  "jsx": {
+    "fileExtension": '.jsx'
   }
 });
 

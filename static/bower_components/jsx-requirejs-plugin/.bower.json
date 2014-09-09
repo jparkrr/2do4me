@@ -1,0 +1,15 @@
+{
+  "name": "jsx-requirejs-plugin",
+  "homepage": "https://github.com/philix/jsx-requirejs-plugin",
+  "version": "0.3.0",
+  "_release": "0.3.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.3.0",
+    "commit": "75f1ba8de3acea4abe936642901d4ea7ad8d0ecc"
+  },
+  "_source": "git://github.com/philix/jsx-requirejs-plugin.git",
+  "_target": "~0.3.0",
+  "_originalSource": "philix/jsx-requirejs-plugin",
+  "_direct": true
+}
