@@ -1,5 +1,7 @@
 # 2do4me
 
+![screenshot](http://cl.ly/image/143V23441n0X/content)
+
 An example todo app that uses:
 
 - Require.js for loading client-side javascript
