@@ -12,7 +12,6 @@ define(["react"], function(React) {
             onChange={this.props.onToggle} />
           <div class>
             {this.state.editText}
-            ({this.props.task.get('sortOrder')})
           </div>
         </div>
       );
