@@ -28,7 +28,9 @@ require.config({
   }
 });
 
-require(["backbone", "router"], function(Backbone, Router) {
-  new Router();
-  Backbone.history.start();
+require(["react", "jsx!app", "models/tasks"], function(React, App, Tasks) {
+  React.renderComponent(
+    new App({tasks: new Tasks()}),
+    document.getElementById('todoapp')
+  );
 });
