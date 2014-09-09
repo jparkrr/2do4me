@@ -2,8 +2,8 @@ define(["react"], function(React) {
   return React.createClass({
     render: function () {
       return (
-        <div>
-          <span>{this.props.count} items left</span>
+        <div className="footer">
+          <span className="count">{this.props.count} items left</span>
           <a href="#" onClick={this.props.removeComplete}>
             Remove completed
           </a>

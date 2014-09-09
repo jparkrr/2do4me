@@ -5,15 +5,15 @@ define(["react"], function(React) {
     },
     render: function () {
       return (
-        <div>
+        <div className="task">
           <input
             type="checkbox"
             checked={this.props.task.get('done')}
             onChange={this.props.onToggle} />
-          <span>
+          <div class>
             {this.state.editText}
             ({this.props.task.get('sortOrder')})
-          </span>
+          </div>
         </div>
       );
     }

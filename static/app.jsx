@@ -33,10 +33,11 @@ function(Task, React, Header, Footer, BackboneMixin) {
 
       return (
         <div>
-          <Header onTaskSubmit={this.handleTaskSubmit} />
-
-          <div>{items}</div>
-
+          <h1>Todos</h1>
+          <div className="content">
+            <Header onTaskSubmit={this.handleTaskSubmit} />
+            <div className="items">{items}</div>
+          </div>
           <Footer
             count={this.props.tasks.where({done: false}).length}
             removeComplete={this.removeComplete}

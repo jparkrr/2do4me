@@ -11,8 +11,7 @@ define(["react"], function(React) {
     },
     render: function () {
       return (
-        <div>
-          <h1>Todos</h1>
+        <div className="input">
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
