@@ -67,7 +67,13 @@ h1 {
 }
 
 .task:nth-child(2n+1) {
-  background: #f4f7fa;
+  background-color: #f4f7fa;
+}
+
+.task:hover {
+  background-image: url('../images/drag.png');
+  background-repeat: no-repeat;
+  background-position: right 30px center;
 }
 
 .task input {
