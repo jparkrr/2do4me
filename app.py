@@ -12,7 +12,7 @@ manager = flask.ext.restless.APIManager(app, flask_sqlalchemy_db=db)
 
 class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    sortOrder = db.Column(db.Integer, unique=True)
+    sortOrder = db.Column(db.Integer)
     text = db.Column(db.Unicode)
     done = db.Column(db.Boolean)
 

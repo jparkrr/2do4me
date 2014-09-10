@@ -6,7 +6,8 @@ require.config({
     "react"      : "bower_components/react/react",
     "JSXTransformer": "bower_components/react/jsxtransformer",
     "jsx"        : "bower_components/jsx-requirejs-plugin/js/jsx",
-    "text"        : "bower_components/jsx-requirejs-plugin/js/text"
+    "text"       : "bower_components/jsx-requirejs-plugin/js/text",
+    "sortable"   : "bower_components/html.sortable/dist/html.sortable"
   },
   "shim" : {
     "backbone" : {
@@ -21,7 +22,8 @@ require.config({
     },
     "underscore" : {
       "exports" : "_"
-    }
+    },
+    "sortable": ["jquery"]
   },
   "jsx": {
     "fileExtension": '.jsx'

@@ -5,7 +5,7 @@ define(["react"], function(React) {
     },
     render: function () {
       return (
-        <div className="task">
+        <div className="task" data-id={this.props.task.get('id')}>
         <label>
           <input
             type="checkbox"
