@@ -1,6 +1,6 @@
 # 2do4me
 
-![screenshot](http://cl.ly/image/143V23441n0X/content)
+![screenshot](http://cl.ly/image/3L452n1B1v2F/content)
 
 An example todo app that uses:
 
