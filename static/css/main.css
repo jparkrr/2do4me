@@ -63,6 +63,7 @@ h1 {
   box-sizing: border-box;
   height: 50px;
   padding-left: 20px;
+  cursor: default;
 }
 
 .task:nth-child(2n+1) {
@@ -78,6 +79,13 @@ h1 {
   height: 100%;
   display: inline-block;
   vertical-align: middle;
+  position: relative;
+  top: -3px;
+}
+
+.checked {
+  color: #999;
+  text-decoration: line-through;
 }
 
 .footer {

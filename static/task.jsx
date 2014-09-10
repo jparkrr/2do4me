@@ -6,13 +6,15 @@ define(["react"], function(React) {
     render: function () {
       return (
         <div className="task">
+        <label>
           <input
             type="checkbox"
             checked={this.props.task.get('done')}
             onChange={this.props.onToggle} />
-          <div class>
+          <div className={this.props.task.get('done')?'checked':'unchecked'}>
             {this.state.editText}
           </div>
+          </label>
         </div>
       );
     }
