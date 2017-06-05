@@ -1,5 +1,9 @@
 define(["react"], function(React) {
   return React.createClass({
+    componentDidMount: function() {
+      this.refs.text.getDOMNode().focus();
+    },
+
     handleTaskSubmit: function(text) {
       this.props.tasks.create({
         text: text
