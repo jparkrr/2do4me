@@ -1,6 +1,6 @@
 define(
-  ["jsx!task", "react", "jsx!header", "jsx!footer", "backbone-updater"],
-function(Task, React, Header, Footer, BackboneMixin) {
+  ["jsx!task", "react", "jsx!taskInput", "jsx!footer", "backbone-updater"],
+function(Task, React, TaskInput, Footer, BackboneMixin) {
   return React.createClass({
     mixins: [BackboneMixin],
     removeComplete: function() {
@@ -35,7 +35,7 @@ function(Task, React, Header, Footer, BackboneMixin) {
         <div>
           <h1>Todos</h1>
           <div className="content">
-            <Header onTaskSubmit={this.handleTaskSubmit} />
+            <TaskInput onTaskSubmit={this.handleTaskSubmit} />
             <div className="items">{items}</div>
           </div>
           <Footer
