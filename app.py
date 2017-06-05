@@ -6,6 +6,7 @@ from sqlalchemy.sql.expression import func
 
 app = Flask(__name__, static_url_path = "")
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/3do5me.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = flask_sqlalchemy.SQLAlchemy(app)
 manager = flask_restless.APIManager(app, flask_sqlalchemy_db=db)
 
