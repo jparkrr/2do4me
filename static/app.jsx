@@ -1,6 +1,6 @@
 define(
-  ["jsx!task", "react", "jsx!taskInput", "jsx!footer", "backbone-updater"],
-function(Task, React, TaskInput, Footer, BackboneMixin) {
+  ["jsx!task", "react", "jsx!taskInput", "jsx!items", "jsx!footer", "backbone-updater"],
+function(Task, React, TaskInput, Items, Footer, BackboneMixin) {
   return React.createClass({
     mixins: [BackboneMixin],
     removeComplete: function() {
@@ -22,21 +22,13 @@ function(Task, React, TaskInput, Footer, BackboneMixin) {
     },
 
     render: function () {
-      var items = this.props.tasks.map(function (t) {
-        return (
-          <Task
-            key={t.get('id')}
-            task={t}
-            onToggle={t.toggle.bind(t)} />
-        );
-      });
 
       return (
         <div>
           <h1>Todos</h1>
           <div className="content">
             <TaskInput onTaskSubmit={this.handleTaskSubmit} />
-            <div className="items">{items}</div>
+            <Items tasks={this.props.tasks} />
           </div>
           <Footer
             count={this.props.tasks.where({done: false}).length}
