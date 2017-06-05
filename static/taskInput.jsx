@@ -1,14 +1,21 @@
 define(["react"], function(React) {
   return React.createClass({
+    handleTaskSubmit: function(text) {
+      this.props.tasks.create({
+        text: text
+      }, {wait: true});
+    },
+
     handleSubmit: function(e) {
       e.preventDefault();
       var text = this.refs.text.getDOMNode().value.trim();
       if (!text) return;
 
-      this.props.onTaskSubmit(text);
+      this.handleTaskSubmit(text);
       this.refs.text.getDOMNode().value = '';
       return;
     },
+
     render: function () {
       return (
         <div className="input">
