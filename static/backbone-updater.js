@@ -4,8 +4,9 @@ define(["sortable"], function(sortable) {
       var component = this;
       this.props.tasks.fetch();
       $('.items').sortable({
-        forcePlaceholderSize: true
+        forcePlaceholderSize: true,
       }).bind('sortupdate', function(e, ui) {
+        $('input:first').focus();
         var maxSort = component.props.tasks.length - 1;
 
         ui.endparent.children().each(function(e) {
