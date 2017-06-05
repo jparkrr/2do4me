@@ -1,13 +1,13 @@
 #!flask/bin/python
 from flask import Flask
-import flask.ext.sqlalchemy
-import flask.ext.restless
+import flask_sqlalchemy
+import flask_restless
 from sqlalchemy.sql.expression import func
 
 app = Flask(__name__, static_url_path = "")
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////tmp/3do5me.db'
-db = flask.ext.sqlalchemy.SQLAlchemy(app)
-manager = flask.ext.restless.APIManager(app, flask_sqlalchemy_db=db)
+db = flask_sqlalchemy.SQLAlchemy(app)
+manager = flask_restless.APIManager(app, flask_sqlalchemy_db=db)
 
 
 class Task(db.Model):
