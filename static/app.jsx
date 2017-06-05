@@ -15,19 +15,13 @@ function(Task, React, TaskInput, Items, Footer, BackboneMixin) {
       })
     },
 
-    handleTaskSubmit: function(text) {
-      this.props.tasks.create({
-        text: text
-      }, {wait: true});
-    },
-
     render: function () {
 
       return (
         <div>
           <h1>Todos</h1>
           <div className="content">
-            <TaskInput onTaskSubmit={this.handleTaskSubmit} />
+            <TaskInput tasks={this.props.tasks} />
             <Items tasks={this.props.tasks} />
           </div>
           <Footer
